@@ -127,6 +127,61 @@ body {
     font-size: 36px;
   }
 }
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #533a27;
+  color: white;
+  padding-top: 1rem;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
+  z-index: 999;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar .toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.sidebar-menu li:hover {
+  background-color: #3b291d;
+}
+
+.sidebar .icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.sidebar.collapsed .text {
+  display: none;
+}
+
+
 
 /* --------- Responsive para móviles pequeños --------- */
 @media screen and (max-width: 480px) {

@@ -9,6 +9,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <div class="sidebar" id="sidebar">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <ul class="sidebar-menu">
+      <li><span class="icon">📁</span><span class="text">Archivos</span></li>
+      <li><span class="icon">📄</span><span class="text">Crear CV</span></li>
+      <li><span class="icon">🚪</span><span class="text">Salir</span></li>
+    </ul>
+  </div>
+  
   <h1 class="page-title">Bienvenido a tu perfil</h1>
 
 
@@ -28,6 +37,12 @@
     <a href="/logout" class="btn">Cerrar Sesión</a>
 
   </div>
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("collapsed");
+    }
+  </script>
+  
 </body>
 </html>
 
