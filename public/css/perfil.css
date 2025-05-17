@@ -40,15 +40,18 @@ header {
   font-weight: 100;
   font-family: 'Mind Explorer', sans-serif;
   letter-spacing: 2px;
-  margin: 0;
-  text-align: center;
+  margin: 0 0 0 90px; /* Mantenemos el margen izquierdo */
+  text-align: left;   /* Alineado a la izquierda, porque ya hay margen */
+  max-width: 100%;
+  word-break: break-word;
 }
 
 /* ------------------ MENÚ LATERAL ------------------ */
 
 .btn-menu label {
-  font-size: 80px;
+  font-size: 60px;
   cursor: pointer;
+  margin-left: 10px;
   color: black;
 }
 
@@ -142,8 +145,8 @@ header {
   border-radius: 30px;
   padding: 2.5rem;
   width: 100%;
-  max-width: 480px;
-  min-width: 280px;
+  max-width: 500px;
+  min-width: 300px;
   flex: 1 1 300px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -265,5 +268,25 @@ header {
   .btn {
     font-size: 20px;
     padding: 20px 40px;
+  }
+}
+/* En pantallas pequeñas, quitamos el margin-left para centrar */
+@media screen and (max-width: 768px) {
+  .page-title {
+    margin-left: 0;
+    text-align: center;
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .page-title {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .btn-menu label {
+    font-size: 32px;
+    margin-left: 5px;
   }
 }
