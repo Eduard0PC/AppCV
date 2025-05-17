@@ -9,17 +9,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class="sidebar" id="sidebar">
-    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
-    <ul class="sidebar-menu">
-      <li><span class="icon">📁</span><span class="text">Archivos</span></li>
-      <li><span class="icon">📄</span><span class="text">Crear CV</span></li>
-      <li><span class="icon">🚪</span><span class="text">Salir</span></li>
-    </ul>
-  </div>
-  
-  <h1 class="page-title">Bienvenido a tu perfil</h1>
+<header>
+          <div class="btn-menu">
+            <label for="btn-menu">☰</label>
+        </div>
+  <h1 class="page-title">TRAZO</h1>
+  <a href="/logout" class="btn">Cerrar Sesión</a>
+</header>  
 
+    <!-- Menú lateral -->
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <label for="btn-menu" class="close-btn">✖️</label>
+            <nav>
+              <div class="user-info">
+              <img src="ruta-a-tu-foto.jpg" alt="Foto de perfil" class="profile-pic">
+                <div class="user-greeting">
+                <h3>¡Hola, {Nombre}!</h3>
+                <p>¿Qué quieres hacer hoy?</p>
+                </div>
+              </div>
+                <a href="">Crear</a>
+                <a href="">Ver Archivos</a>
+                <a href="">Perfil</a>
+                <a href="">Cerrar Sesión</a>
+            </nav>
+        </div>
+    </div>
 
   <div class="menu">
     <div class="card">
@@ -33,9 +50,6 @@
       <p>Diseña y genera un currículum profesional en pocos pasos.</p>
       <a href="/cv" class="btn">Crear CV</a>
     </div>
-
-    <a href="/logout" class="btn">Cerrar Sesión</a>
-
   </div>
   <script>
     function toggleSidebar() {
